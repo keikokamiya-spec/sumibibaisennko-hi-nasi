@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ja">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,11 +9,14 @@
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Noto+Sans+JP:wght@400;500;700&family=Noto+Serif+JP:wght@400;500;700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Noto+Sans+JP:wght@400;500;700&family=Noto+Serif+JP:wght@400;500;700&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
     <!-- FontAwesome for Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
+
 <body>
     <!-- ヘッダー -->
     <header id="header" class="header">
@@ -73,12 +77,12 @@
     <section class="menu section" id="menu">
         <div class="container">
             <h2 class="section-title center fade-in-up">Menu<span class="ja">お品書き</span></h2>
-            
+
             <div class="menu-grid">
                 <!-- 珈琲メニュー -->
                 <div class="menu-card fade-in-up">
                     <div class="menu-img">
-                        <img src="img/ロイヤルブレンド.PNG" alt="ロイヤルブレンド">
+                        <img src="img/mu31.jpg" alt="ロイヤルブレンド">
                     </div>
                     <div class="menu-info">
                         <h3 class="menu-name">こだわりのブレンド</h3>
@@ -95,7 +99,7 @@
                 <!-- スイーツメニュー -->
                 <div class="menu-card fade-in-up delay-1">
                     <div class="menu-img">
-                        <img src="img/レアチーズケーキ.PNG" alt="レアチーズケーキ">
+                        <img src="img/626519715_18554605096035770_3167565252990616460_n.jpg" alt="レアチーズケーキ">
                     </div>
                     <div class="menu-info">
                         <h3 class="menu-name">手作りレアチーズケーキ</h3>
@@ -111,10 +115,12 @@
         <div class="container">
             <h2 class="section-title center fade-in-up">Space & Gallery<span class="ja">空間と器</span></h2>
             <p class="center fade-in-up desc-text">壁面を彩るアート展示や、棚に並ぶ多彩なデザインのカップ。<br>お客様に合わせた一杯をお選びいたします。</p>
-            
+
             <div class="gallery-grid">
-                <div class="gallery-item fade-in-up"><img src="img/mu31.jpg" alt="店内風景1"></div>
-                <div class="gallery-item fade-in-up delay-1"><img src="img/mu41.jpg" alt="店内風景2"></div>
+                <div class="gallery-item fade-in-up"><img
+                        src="img/624992118_18553720138000928_1249161250110594832_n.jpg" alt="店内風景1"></div>
+                <div class="gallery-item fade-in-up delay-1"><img
+                        src="img/654964840_18039188144763397_919502177755934604_n.jpg" alt="店内風景2"></div>
                 <div class="gallery-item fade-in-up delay-2"><img src="img/mu51.jpg" alt="店内風景3"></div>
                 <div class="gallery-item fade-in-up"><img src="img/ブレンドコーヒー.PNG" alt="ブレンドコーヒー"></div>
             </div>
@@ -157,7 +163,10 @@
                 </div>
                 <div class="access-map">
                     <!-- Google Maps Iframe -->
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3250.297491410972!2d139.64684531525227!3d35.43997298024249!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60185ce5e6f6d5bf%3A0xe6ab123d1b827e70!2z54Kt54Gr54SZ54W-54-I55CyIOeEow!5e0!3m2!1sja!2sjp!4v1700000000000!5m2!1sja!2sjp" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3250.547801859493!2d139.6499666!3d35.4412303!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60185ce1e4b42b25%3A0xb084b2a3dab783f3!2z54Kt54Gr54SZ54WO54-I55CyIOeEoQ!5e0!3m2!1sja!2sjp!4v1776136300527!5m2!1sja!2sjp"
+                        width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
                 </div>
             </div>
         </div>
@@ -175,20 +184,20 @@
         // ハンバーガーメニューの切り替え
         const navToggle = document.getElementById('nav-toggle');
         const header = document.getElementById('header');
-        
+
         navToggle.addEventListener('click', () => {
             header.classList.toggle('open');
         });
 
         // スクロール時のヘッダー背景変更 & フェードインアニメーション
         const faders = document.querySelectorAll('.fade-in-up');
-        
+
         const appearOptions = {
             threshold: 0.15,
             rootMargin: "0px 0px -50px 0px"
         };
-        
-        const appearOnScroll = new IntersectionObserver(function(entries, observer) {
+
+        const appearOnScroll = new IntersectionObserver(function (entries, observer) {
             entries.forEach(entry => {
                 if (!entry.isIntersecting) {
                     return;
@@ -198,7 +207,7 @@
                 }
             });
         }, appearOptions);
-        
+
         faders.forEach(fader => {
             appearOnScroll.observe(fader);
         });
@@ -212,4 +221,5 @@
         });
     </script>
 </body>
+
 </html>
